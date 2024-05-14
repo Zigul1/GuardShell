@@ -1,5 +1,5 @@
 # GuardShell
-(![309580213-98e4d648-c4c9-440f-84d4-3c6513dcd349](https://github.com/Zigul1/GuardShell/assets/157254375/97a8a953-3e88-4cef-b120-b0e6c4aab129) la versione in italiano è "*GuardShell-ita.ps1*")
+(![309580213-98e4d648-c4c9-440f-84d4-3c6513dcd349](https://github.com/Zigul1/GuardShell/assets/157254375/97a8a953-3e88-4cef-b120-b0e6c4aab129) la versione in italiano è "*GuardShell-ita.ps1*", come guida c'è [questo articolo](https://turbolab.it/sicurezza-13/guardshell-proteggere-programmi-password-passfile-4129) )
 
 GuardShell is a PowerShell script for **Windows 10** that guides the user to quickly generate another PowerShell script (the "protection script", you will chose its name), that allows to **protect processes and programs** (somehow also folders, more on that later) with a **password** or with a **passfile** (that is not just a file instead of a password, more on that later too). It can be used to password-protect browsers or applications, but **it must not be used on system crucial processes**, otherwise the OS will get unstable or compromised.
 
