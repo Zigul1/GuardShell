@@ -15,9 +15,9 @@ Not all the fields have to be compiled, you can choose to use only a password or
 
 In case you choose only (or also) the **passfile**, this is how it works: ***if the chosen passfile is in the chosen passfolder, the protection is off; if the passfile is not in the passfolder, the protection is on***; just like a key and a lock. So the basic idea is to keep the passfile *not* in the passfolder (in an external device? in the cloud? compressed elsewhere?) and, when it's needed, just make a *copy* of it in the passfolder. The passfile is valid as long as its SHA1 hash doesn't change; you can rename it, just don't alter its data. Consider that when the passfile protection is on, there will be no warnings nor requests and it will be up to the user to eventually restore the protection.
 
-In general, to be sure that the protection is back on, after have closed a process protected by password, or have removed the passfile from the passfolder, is better to **wait around 5 seconds** (unless this interval has been manually changed in the script).
+In general, to be sure that the protection is back on, after you have closed a process previously unlocked by password, or have removed the **passfile** from the **passfolder**, is better to **wait around 5 seconds** (unless this interval has been manually changed in the script).
 
-When the "protection script" (as filter.ps1 in the example) has been created, its main use is to set it as a **scheduled task** to run at startup or when a user logs in, when a certain events occurs, etc.
+When the "protection script" (as filter.ps1 in the example) has been created, its main use case is to be set as a **scheduled task** to run at startup or when a user logs in, when a certain events occurs, etc.
 
 
 ## FAQ
