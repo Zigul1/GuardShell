@@ -75,7 +75,7 @@ while (`$true) {
         New-Item -ItemType File -Path `$safelist
     }
     `# Clean the safelist from inactive previously authorized processes
-    if (`$safelist -ne "") {
+    if ((Get-Content "`$safelist") -ne `$null) {
         foreach (`$safeproc in (Get-Content "`$safelist")) {
                 If ((Get-Process | Select-Object Name | Select-String `$safeproc -SimpleMatch) -eq `$null) {
                     Set-Content ((Get-Content "`$safelist") | ForEach-Object { `$_ -replace `$safeproc, `$null } | Where-Object { `$_.trim() -ne "" }) -Path "`$safelist"
