@@ -24,7 +24,11 @@ When the "protection script" (as filter.ps1 in the example) has been created, it
 
 + **How to be sure to have properly configured the "protection script"?**
 
-Before creating the "protection script", GuardShell will check if the designated folders exist and if there is any information missing. Just be sure to remember the passfile, only its hash is stored in the script. The blocklist with the monitored processes, the password and the passfolder are in **plain text** in the script, so you can retrieve them (and that's why you should protect the script folder).
+Before creating the "protection script", GuardShell will check if the designated folders exist and if there is any information missing. Just be sure to remember the passfile, only its hash is stored in the script. The blocklist with the monitored processes, the password and the passfolder are in **plain text** in the script, so you can retrieve them (and that's why you should protect the script folder; read below).
+
++ **How to prevent the tempering of the protection script?**
+
+The better way is to set **proper permissions, both for the script execution and for its folder**. In general, it's better to include "***taskmgr***" and "***mmc***" in the controlled processes, so that the script cannot be stopped or disabled simply using Task Manager or Task Scheduler. Besides choosing unsuspected locations and folder names, it is also possibile, as shown above, to set a passfile and a passfolder (for which you have access permissions) to hinder the access to the "protection script" folder. Keeping the passfile outside the passfolder, will prevent *File Explorer* (not everything) to open that folder. This *weak* method can be applied by the protection script also to other folders even if no password and no process have been set to be checked (just press Enter when asked about them).
 
 + **Why, after the protection has been removed (by password or passfile), the program is launched but the file is not opened?**
 
@@ -37,10 +41,6 @@ The "protection script" monitors the processes looking for **blacklisted process
 + **What happens in the protection script folder during the monitoring?**
 
 In the "protection script" folder, that can be any folder, the script will be hidden and you will find a "**safe.txt**" file, **automatically managed** by the script (the user must not modify it), used to store temporarily the processes allowed after the right password is used; if someone erases it, it will be regenerated empty.
-
-+ **How to prevent the tempering of the protection script?**
-
-The better way is to set **proper permissions, both for the script execution and for its folder**. In general, it's better to include "***taskmgr***" and "***mmc***" in the controlled processes, so that the script cannot be stopped or disabled simply using Task Manager or Task Scheduler. Besides choosing unsuspected locations and foler names, it is also possibile, as shown above, to set a passfile and a passfolder (for which you have access permissions) to hinder the access to the "protection script" folder. Keeping the passfile outside the passfolder, will prevent *File Explorer* (not everything) to open that folder. This *weak* method can be applied by the protection script also to other folders even if no password and no process have been set to be checked (just press Enter when asked about them).
 
 + **What unusual behavior can be shown by the script?**
 
