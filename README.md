@@ -24,7 +24,7 @@ When the "protection script" (as filter.ps1 in the example) has been created, it
 
 + **How to be sure to have properly configured the "protection script"?**
 
-Before creating the "protection script", GuardShell will check if the designated folders exist and if there is any information missing. Just be sure to remember the password and the passfile, they are stored **hardcoded but hased** in the script (it is not necessary, but the password is salted and manipulated). The blocklist with the monitored processes and the passfolder are in **plain text** in the script, so you can retrieve them.
+Before creating the "protection script", GuardShell will check if the designated folders exist and if there is any information missing. Just be sure to remember the passfile, only its hash is stored in the script. The blocklist with the monitored processes, the password and the passfolder are in **plain text** in the script, so you can retrieve them (and that's why you should protect the script folder).
 
 + **Why, after the protection has been removed (by password or passfile), the program is launched but the file is not opened?**
 
